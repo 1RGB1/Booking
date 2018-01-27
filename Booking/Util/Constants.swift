@@ -33,6 +33,12 @@ let RESERVATION_CANCELLED : String = "Reservation cancelled"
 let RESERVATION_DENIED    : String = "Reservation denied"
 let RESERVATION_APPROVED  : String = "Reservation approved"
 
+// Availability
+enum Availability : Int {
+    case NO = 0
+    case YES
+}
+
 // Categories
 enum Category : Int {
     case All = 0

@@ -83,7 +83,8 @@ class MyReservationsViewController: UIViewController, UITableViewDataSource, UIT
             
             itemInfoViewController.itemModel = reservationModel.item
             itemInfoViewController.images = reservationModel.images
-            itemInfoViewController.mainButtonAction = ReservationsActions.Cancel
+            itemInfoViewController.mainButtonAction = .Approve
+            itemInfoViewController.subButtonAction = .Deny
         }
     }
 }

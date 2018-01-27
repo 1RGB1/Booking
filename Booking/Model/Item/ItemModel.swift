@@ -10,22 +10,22 @@ import ObjectMapper
 
 class ItemModel : Mappable {
     
-    var id: Int?
+    var id: String?
     var title: String?
     var description: String?
-    var air_conditioner: Bool?
-    var on_beach: Bool?
-    var rooms_num: Int?
-    var persons_num: Int?
-    var breakfast_included: Bool?
-    var lunch_included: Bool?
-    var dinner_included: Bool?
-    var drinks_included: Bool?
-    var price: Float?
-    var poster_id: Int?
-    var category_id: Int?
-    var lat: Double?
-    var lng: Double?
+    var air_conditioner: String?
+    var on_beach: String?
+    var rooms_num: String?
+    var persons_num: String?
+    var breakfast_included: String?
+    var lunch_included: String?
+    var dinner_included: String?
+    var drinks_included: String?
+    var price: String?
+    var poster_id: String?
+    var category_id: String?
+    var lat: String?
+    var lng: String?
     var images: [String]?
     
     required init?(map: Map) {}

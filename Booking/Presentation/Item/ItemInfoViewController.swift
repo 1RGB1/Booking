@@ -100,12 +100,16 @@ class ItemInfoViewController: UIViewController {
     
     func requestReservation() {
         if let model = itemModel, let itemId = model.id, let posterId = model.poster_id {
-            self.itemsNetwork.requestReservationFor(item_id: itemId, user_id: posterId) {
+            self.itemsNetwork.requestReservationFor(item_id: Int(itemId)!, user_id: Int(posterId)!) {
                 (baseModel, error) in
                 
                 if error == SUCCESS {
-                    let errorAlertController = Utilities.showAlertWithTitle(SUCCESS, withMessage: RESERVATION_REQUESTED)
-                    self.present(errorAlertController, animated: true, completion: nil)
+                    let alertController = UIAlertController(title: SUCCESS, message: RESERVATION_REQUESTED, preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (alert) in
+                        self.navigationController?.popViewController(animated: true)
+                    })
+                    alertController.addAction(okAction)
+                    self.present(alertController, animated: true, completion: nil)
                 } else {
                     let errorAlertController = Utilities.showAlertWithTitle(ERROR, withMessage: error!)
                     self.present(errorAlertController, animated: true, completion: nil)
@@ -119,12 +123,16 @@ class ItemInfoViewController: UIViewController {
     
     func approveReservation() {
         if let model = itemModel, let reservation_id = model.id {
-            self.itemsNetwork.approveReservationFor(reservation_id: reservation_id) {
+            self.itemsNetwork.approveReservationFor(reservation_id: Int(reservation_id)!) {
                 (baseModel, error) in
                 
                 if error == SUCCESS {
-                    let errorAlertController = Utilities.showAlertWithTitle(SUCCESS, withMessage: RESERVATION_APPROVED)
-                    self.present(errorAlertController, animated: true, completion: nil)
+                    let alertController = UIAlertController(title: SUCCESS, message: RESERVATION_APPROVED, preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (alert) in
+                        self.navigationController?.popViewController(animated: true)
+                    })
+                    alertController.addAction(okAction)
+                    self.present(alertController, animated: true, completion: nil)
                 } else {
                     let errorAlertController = Utilities.showAlertWithTitle(ERROR, withMessage: error!)
                     self.present(errorAlertController, animated: true, completion: nil)
@@ -138,12 +146,16 @@ class ItemInfoViewController: UIViewController {
     
     func cancelReservation() {
         if let model = itemModel, let reservation_id = model.id {
-            self.itemsNetwork.cancelReservationFor(reservation_id: reservation_id) {
+            self.itemsNetwork.cancelReservationFor(reservation_id: Int(reservation_id)!) {
                 (baseModel, error) in
                 
                 if error == SUCCESS {
-                    let errorAlertController = Utilities.showAlertWithTitle(SUCCESS, withMessage: RESERVATION_CANCELLED)
-                    self.present(errorAlertController, animated: true, completion: nil)
+                    let alertController = UIAlertController(title: SUCCESS, message: RESERVATION_CANCELLED, preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (alert) in
+                        self.navigationController?.popViewController(animated: true)
+                    })
+                    alertController.addAction(okAction)
+                    self.present(alertController, animated: true, completion: nil)
                 } else {
                     let errorAlertController = Utilities.showAlertWithTitle(ERROR, withMessage: error!)
                     self.present(errorAlertController, animated: true, completion: nil)
@@ -157,12 +169,16 @@ class ItemInfoViewController: UIViewController {
     
     func denyReservation() {
         if let model = itemModel, let reservation_id = model.id {
-            self.itemsNetwork.denyReservationFor(reservation_id: reservation_id) {
+            self.itemsNetwork.denyReservationFor(reservation_id: Int(reservation_id)!) {
                 (baseModel, error) in
                 
                 if error == SUCCESS {
-                    let errorAlertController = Utilities.showAlertWithTitle(SUCCESS, withMessage: RESERVATION_DENIED)
-                    self.present(errorAlertController, animated: true, completion: nil)
+                    let alertController = UIAlertController(title: SUCCESS, message: RESERVATION_DENIED, preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (alert) in
+                        self.navigationController?.popViewController(animated: true)
+                    })
+                    alertController.addAction(okAction)
+                    self.present(alertController, animated: true, completion: nil)
                 } else {
                     let errorAlertController = Utilities.showAlertWithTitle(ERROR, withMessage: error!)
                     self.present(errorAlertController, animated: true, completion: nil)

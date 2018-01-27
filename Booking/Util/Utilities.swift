@@ -28,19 +28,19 @@ class Utilities {
     class func saveAndDeleteUser(model: UserModel?) {
         let defaults = UserDefaults.standard
         
-//        if model == nil {
-//            defaults.set(-1, forKey: "UserId")
-//        } else {
-//            defaults.set(model!.id, forKey: "UserId")
-//        }
+        if model == nil {
+            defaults.set(-1, forKey: "UserId")
+        } else {
+            defaults.set(Int(model!.id!), forKey: "UserId")
+        }
         
-        defaults.set(1, forKey: "UserId")
+        //defaults.set(1, forKey: "UserId")
         defaults.synchronize()
     }
     
     // Check Login API, Why it doesn't return the right data
     class func getSavedUserId() -> Int {
-//        return UserDefaults.standard.object(forKey: "UserId") as! Int
-        return 1
+        return UserDefaults.standard.object(forKey: "UserId") as! Int
+//        return 1
     }
 }

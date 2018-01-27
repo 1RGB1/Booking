@@ -12,8 +12,8 @@ import ObjectMapper
 class ItemsNetwork : BaseWebService {
     
     func requestReservationFor(item_id: Int,
-                           user_id: Int,
-                           completionHandler: @escaping (_ model: BaseModel?, _ error: String?) -> ()) {
+                               user_id: Int,
+                               completionHandler: @escaping (_ model: BaseModel?, _ error: String?) -> ()) {
         
         let parameters = ["user_id" : user_id,
                           "item_id" : item_id] as [String : AnyObject]

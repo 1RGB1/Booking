@@ -10,14 +10,14 @@ import ObjectMapper
 
 class UserModel : BaseModel {
     
-    var id: Int?
+    var id: String?
     var username: String?
     var email: String?
     var password: String?
-    var phone: Double?
+    var phone: String?
     var address: String?
-    var lat: Double?
-    var lng: Double?
+    var lat: String?
+    var lng: String?
     
     override func mapping(map: Map) {
         super.mapping(map: map)

@@ -83,8 +83,7 @@ class MyItemsViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             itemInfoViewController.itemModel = itemModel
             itemInfoViewController.images = itemModel.images
-            itemInfoViewController.mainButtonAction = ReservationsActions.Approve
-            itemInfoViewController.subButtonAction = ReservationsActions.Deny
+            itemInfoViewController.mainButtonAction = .Cancel
         }
     }
 }

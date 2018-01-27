@@ -10,6 +10,7 @@ import UIKit
 
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
+    //MARK: Outlets
     @IBOutlet weak var searchCriteriaControl: UISegmentedControl!
     @IBOutlet weak var categoriesView: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -18,8 +19,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var dropDownListHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchBarHeightConstraint: NSLayoutConstraint!
     
-    @IBOutlet var categoriesButtons: [UIButton]!
+    @IBOutlet var categoriesButtons: [FancyButton]!
     
+    //MARK: Locals
     var isInSearchMode = false
     var dropDownListHieght = CGFloat()
     var searchBarHieght = CGFloat()
@@ -29,6 +31,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var filteredAvailableItems = [ItemModel]()
     let itemsNetwork = ItemsNetwork()
     
+    //MARK: View Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,6 +58,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidAppear(animated)
     }
     
+    //MARK: Buttons Actions
     @IBAction func logoutPressed(_ sender: Any) {
         Utilities.saveAndDeleteUser(model: nil)
         
@@ -88,6 +92,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             UIView.animate(withDuration: 0.5, animations: {
                 category.isHidden = true
                 self.dropDownListHeightConstraint.constant -= 41
+                self.view.layoutIfNeeded()
             })
         }
 
@@ -100,9 +105,10 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.categoriesButtons.forEach {
             (category) in
 
-            UIView.animate(withDuration: 2.5, animations: {
+            UIView.animate(withDuration: 0.75, animations: {
                 category.isHidden = false
                 self.dropDownListHeightConstraint.constant += 41
+                self.view.layoutIfNeeded()
             })
         }
         
@@ -212,6 +218,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         performSegue(withIdentifier: "searchSegue", sender: itemModel)
     }
     
+    //MARK: Navigation Segue Actions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "searchSegue" {
             let itemInfoViewController = segue.destination as! ItemInfoViewController

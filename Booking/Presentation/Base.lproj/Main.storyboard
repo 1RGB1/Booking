@@ -540,7 +540,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TGE-h1-Z1k" userLabel="Title Text">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TGE-h1-Z1k" userLabel="Title Text" customClass="FancyField" customModule="Booking" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="19.5" width="335" height="30"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -557,7 +557,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZe-za-CkJ" userLabel="Description Text">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZe-za-CkJ" userLabel="Description Text" customClass="FancyField" customModule="Booking" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="19.5" width="335" height="30"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -577,7 +577,7 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b76-o8-LSl" userLabel="Price Tetx">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b76-o8-LSl" userLabel="Price Tetx" customClass="FancyField" customModule="Booking" customModuleProvider="target">
                                                                         <rect key="frame" x="32" y="0.0" width="73" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -594,7 +594,7 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q9e-aX-3KM" userLabel="Rooms Text">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q9e-aX-3KM" userLabel="Rooms Text" customClass="FancyField" customModule="Booking" customModuleProvider="target">
                                                                         <rect key="frame" x="43" y="0.0" width="62" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -611,7 +611,7 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N6T-lC-18s" userLabel="Persons Text">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N6T-lC-18s" userLabel="Persons Text" customClass="FancyField" customModule="Booking" customModuleProvider="target">
                                                                         <rect key="frame" x="47.5" y="0.0" width="57.5" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -668,25 +668,25 @@
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GKs-KB-jUb" userLabel="Item Details 3">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GKs-KB-jUb" userLabel="Item Details 3">
                                                         <rect key="frame" x="0.0" y="220" width="335" height="31"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dCC-GS-Xnm" userLabel="Breakfast">
-                                                                <rect key="frame" x="0.0" y="0.0" width="123" height="31"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="31"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breakfast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPp-pN-PxS" userLabel="Breakfast Label">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="31"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="50.5" height="31"/>
                                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hnY-l5-oSe" userLabel="Breakfast Switch">
-                                                                        <rect key="frame" x="74" y="0.0" width="51" height="31"/>
+                                                                        <rect key="frame" x="54.5" y="0.0" width="51" height="31"/>
                                                                     </switch>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="GiQ-4b-e1t" userLabel="Lunch">
-                                                                <rect key="frame" x="133" y="0.0" width="101" height="31"/>
+                                                                <rect key="frame" x="123.5" y="0.0" width="100.5" height="31"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4N-rT-P7M" userLabel="Lunch Label">
                                                                         <rect key="frame" x="0.0" y="0.0" width="49" height="31"/>
@@ -695,7 +695,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i8i-8f-BgI" userLabel="Lunch Switch">
-                                                                        <rect key="frame" x="52" y="0.0" width="51" height="31"/>
+                                                                        <rect key="frame" x="52" y="0.0" width="50.5" height="31"/>
                                                                     </switch>
                                                                 </subviews>
                                                             </stackView>
@@ -711,7 +711,7 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vkx-AR-3ka" userLabel="Dinner Switch">
+                                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vkx-AR-3ka" userLabel="Dinner Switch">
                                                                         <rect key="frame" x="43" y="0.0" width="50" height="31"/>
                                                                     </switch>
                                                                 </subviews>
@@ -730,7 +730,7 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eYc-hu-M0b" userLabel="Latitude">
                                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7M-ws-bT5" userLabel="Lat Label">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7M-ws-bT5" userLabel="Lat Label">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="57" height="30"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56.5" id="oYp-Se-iL9"/>
@@ -739,11 +739,14 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tIS-GK-1n8" userLabel="Lat Text">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tIS-GK-1n8" userLabel="Lat Text" customClass="FancyField" customModule="Booking" customModuleProvider="target">
                                                                                 <rect key="frame" x="62" y="0.0" width="218" height="30"/>
                                                                                 <nil key="textColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <connections>
+                                                                                    <outlet property="delegate" destination="RCa-gb-IvK" id="2jn-YF-UA2"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
@@ -756,17 +759,20 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0G-tL-DCc" userLabel="Lng Text">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0G-tL-DCc" userLabel="Lng Text" customClass="FancyField" customModule="Booking" customModuleProvider="target">
                                                                                 <rect key="frame" x="61.5" y="0.0" width="218.5" height="30"/>
                                                                                 <nil key="textColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <textInputTraits key="textInputTraits"/>
+                                                                                <connections>
+                                                                                    <outlet property="delegate" destination="RCa-gb-IvK" id="UP0-bz-9le"/>
+                                                                                </connections>
                                                                             </textField>
                                                                         </subviews>
                                                                     </stackView>
                                                                 </subviews>
                                                             </stackView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCm-Jr-QcK">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCm-Jr-QcK" customClass="FancyButton" customModule="Booking" customModuleProvider="target">
                                                                 <rect key="frame" x="300" y="17.5" width="35" height="35"/>
                                                                 <color key="backgroundColor" red="0.39364451169999998" green="0.89909154179999995" blue="0.65233957769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
@@ -774,20 +780,116 @@
                                                                     <constraint firstAttribute="width" constant="35" id="P6G-3X-gcu"/>
                                                                 </constraints>
                                                                 <state key="normal" image="ic_my_location_white_36pt"/>
+                                                                <connections>
+                                                                    <action selector="selectItemLocationFromMap:" destination="RCa-gb-IvK" eventType="touchUpInside" id="tlW-lY-emZ"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="Sej-kk-PMt" firstAttribute="centerX" secondItem="5Ui-Sg-hLe" secondAttribute="centerX" id="9un-fR-fsr"/>
+                                                    <constraint firstItem="GKs-KB-jUb" firstAttribute="centerX" secondItem="5Ui-Sg-hLe" secondAttribute="centerX" id="ycc-8f-9kh"/>
                                                 </constraints>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dTO-Jv-0KI" userLabel="Categories">
+                                                <rect key="frame" x="20" y="354" width="158" height="33"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F10-Bm-gVx" userLabel="Select Category" customClass="FancyButton" customModule="Booking" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="158" height="33"/>
+                                                        <color key="backgroundColor" red="0.39364451169999998" green="0.89909154179999995" blue="0.65233957769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="158" id="0XR-Sw-5PI"/>
+                                                            <constraint firstAttribute="height" constant="33" id="NwS-sj-oNy"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                        <state key="normal" title="Select Category">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectCategoryPressed:" destination="RCa-gb-IvK" eventType="touchUpInside" id="Dgx-J8-rdL"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGw-Kx-XIg" userLabel="Hotels" customClass="FancyButton" customModule="Booking" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="-418" width="158" height="33"/>
+                                                        <color key="backgroundColor" red="0.39364451169999998" green="0.89909154179999995" blue="0.65233957769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="33" id="98l-ht-p4Y"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                        <state key="normal" title="Hotels">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="categoryPressed:" destination="RCa-gb-IvK" eventType="touchUpInside" id="y3Q-wz-7fV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61Y-eh-Et2" userLabel="Apartments " customClass="FancyButton" customModule="Booking" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="-418" width="158" height="33"/>
+                                                        <color key="backgroundColor" red="0.39364451169999998" green="0.89909154179999995" blue="0.65233957769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="33" id="EJ0-bg-Ynd"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                        <state key="normal" title="Apartments">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="categoryPressed:" destination="RCa-gb-IvK" eventType="touchUpInside" id="Myc-5H-ah1"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xo-A0-iOj" userLabel="Villas" customClass="FancyButton" customModule="Booking" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="-418" width="158" height="33"/>
+                                                        <color key="backgroundColor" red="0.39364451169999998" green="0.89909154179999995" blue="0.65233957769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="33" id="rX4-7c-uVC"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                        <state key="normal" title="Villas">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="categoryPressed:" destination="RCa-gb-IvK" eventType="touchUpInside" id="BjC-5B-e55"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button hidden="YES" opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVW-8F-9gH" userLabel="Huts" customClass="FancyButton" customModule="Booking" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="-418" width="158" height="33"/>
+                                                        <color key="backgroundColor" red="0.39364451169999998" green="0.89909154179999995" blue="0.65233957769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="33" id="pIY-7Q-ccX"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                        <state key="normal" title="Huts">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="categoryPressed:" destination="RCa-gb-IvK" eventType="touchUpInside" id="AG5-9s-2JM"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FT2-hZ-Zt4" userLabel="Upload Image" customClass="FancyButton" customModule="Booking" customModuleProvider="target">
+                                                <rect key="frame" x="198" y="354" width="157" height="33"/>
+                                                <color key="backgroundColor" red="0.39364451169999998" green="0.89909154179999995" blue="0.65233957769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                <state key="normal" title="Upload Image">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="uploadImagePressed:" destination="RCa-gb-IvK" eventType="touchUpInside" id="Dsa-QL-Kso"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="FT2-hZ-Zt4" secondAttribute="trailing" constant="20" id="46R-ch-I4y"/>
+                                            <constraint firstItem="dTO-Jv-0KI" firstAttribute="leading" secondItem="UDv-wd-jPa" secondAttribute="leading" constant="20" id="9eg-xc-wSr"/>
                                             <constraint firstItem="5Ui-Sg-hLe" firstAttribute="top" secondItem="UDv-wd-jPa" secondAttribute="top" constant="8" id="ALY-Ni-Uqv"/>
+                                            <constraint firstItem="FT2-hZ-Zt4" firstAttribute="leading" secondItem="dTO-Jv-0KI" secondAttribute="trailing" constant="20" id="HN2-TU-QmM"/>
+                                            <constraint firstItem="dTO-Jv-0KI" firstAttribute="top" secondItem="5Ui-Sg-hLe" secondAttribute="bottom" constant="10" id="dX8-ee-a0j"/>
                                             <constraint firstAttribute="trailing" secondItem="5Ui-Sg-hLe" secondAttribute="trailing" constant="20" id="kFv-q6-Lcy"/>
                                             <constraint firstItem="5Ui-Sg-hLe" firstAttribute="leading" secondItem="UDv-wd-jPa" secondAttribute="leading" constant="20" id="usT-XU-wUM"/>
+                                            <constraint firstItem="FT2-hZ-Zt4" firstAttribute="top" secondItem="5Ui-Sg-hLe" secondAttribute="bottom" constant="10" id="v0h-Ay-xZD"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -813,8 +915,32 @@
                     <navigationItem key="navigationItem" title="Add New Item" id="xjQ-PG-blw">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="McE-8L-tN4">
                             <color key="tintColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="logoutPressed:" destination="RCa-gb-IvK" id="sZi-uS-epR"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="acSwitch" destination="qjQ-ya-moE" id="RBd-qg-hNF"/>
+                        <outlet property="beachSwitch" destination="qoE-br-5WN" id="LLa-cF-EtC"/>
+                        <outlet property="breakfastSwitch" destination="hnY-l5-oSe" id="v20-9x-PKW"/>
+                        <outlet property="descriptionText" destination="pZe-za-CkJ" id="Jmk-1j-JiL"/>
+                        <outlet property="dinnerSwitch" destination="Vkx-AR-3ka" id="mLK-ZC-yJf"/>
+                        <outlet property="drinksSwitch" destination="NLm-j9-VWe" id="Dxd-F8-zqn"/>
+                        <outlet property="latitudeText" destination="tIS-GK-1n8" id="cpe-uM-hCR"/>
+                        <outlet property="longitudeText" destination="m0G-tL-DCc" id="UlJ-0a-QOP"/>
+                        <outlet property="lunchSwitch" destination="i8i-8f-BgI" id="y1e-U3-bQD"/>
+                        <outlet property="movingScrollView" destination="pFV-fD-T0a" id="pma-Uz-oNS"/>
+                        <outlet property="numberOfPersonsText" destination="N6T-lC-18s" id="ka1-5G-q7n"/>
+                        <outlet property="numberOfRoomsText" destination="Q9e-aX-3KM" id="buW-8i-7Bh"/>
+                        <outlet property="priceText" destination="b76-o8-LSl" id="WNJ-Dd-KjG"/>
+                        <outlet property="selectCategoryButton" destination="F10-Bm-gVx" id="FW2-LW-yhc"/>
+                        <outlet property="titleText" destination="TGE-h1-Z1k" id="NPF-EP-hXO"/>
+                        <outletCollection property="categoriesButtons" destination="VGw-Kx-XIg" collectionClass="NSMutableArray" id="Sux-XM-f9F"/>
+                        <outletCollection property="categoriesButtons" destination="61Y-eh-Et2" collectionClass="NSMutableArray" id="SPW-Pz-joL"/>
+                        <outletCollection property="categoriesButtons" destination="1xo-A0-iOj" collectionClass="NSMutableArray" id="wxb-ER-WEk"/>
+                        <outletCollection property="categoriesButtons" destination="pVW-8F-9gH" collectionClass="NSMutableArray" id="dQY-EN-qcd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSU-QN-rch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -924,7 +1050,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jQW-qP-raF">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="205"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ae7-NG-en1" userLabel="All">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ae7-NG-en1" userLabel="All" customClass="FancyButton" customModule="Booking" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="41"/>
                                                 <color key="backgroundColor" red="0.39364451169999998" green="0.89909154179999995" blue="0.65233957769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -938,7 +1064,7 @@
                                                     <action selector="categoryButtonPressed:" destination="zms-mB-hPW" eventType="touchUpInside" id="Pdk-Q0-ebQ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaF-RM-by9" userLabel="Hotels">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaF-RM-by9" userLabel="Hotels" customClass="FancyButton" customModule="Booking" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="41" width="375" height="41"/>
                                                 <color key="backgroundColor" red="0.39364451169999998" green="0.89909154179999995" blue="0.65233957769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -952,7 +1078,7 @@
                                                     <action selector="categoryButtonPressed:" destination="zms-mB-hPW" eventType="touchUpInside" id="913-B7-gJk"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHX-UJ-XIy" userLabel="Apartments">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHX-UJ-XIy" userLabel="Apartments" customClass="FancyButton" customModule="Booking" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="82" width="375" height="41"/>
                                                 <color key="backgroundColor" red="0.39364451169999998" green="0.89909154179999995" blue="0.65233957769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -966,7 +1092,7 @@
                                                     <action selector="categoryButtonPressed:" destination="zms-mB-hPW" eventType="touchUpInside" id="kXc-8t-E46"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0P9-yu-lwp" userLabel="Villas">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0P9-yu-lwp" userLabel="Villas" customClass="FancyButton" customModule="Booking" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="123" width="375" height="41"/>
                                                 <color key="backgroundColor" red="0.39364451169999998" green="0.89909154179999995" blue="0.65233957769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -980,7 +1106,7 @@
                                                     <action selector="categoryButtonPressed:" destination="zms-mB-hPW" eventType="touchUpInside" id="Pgq-8m-56F"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcc-si-JfZ" userLabel="Huts">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcc-si-JfZ" userLabel="Huts" customClass="FancyButton" customModule="Booking" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="164" width="375" height="41"/>
                                                 <color key="backgroundColor" red="0.39364451169999998" green="0.89909154179999995" blue="0.65233957769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -1211,6 +1337,6 @@
         <image name="ic_search_white_36pt" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Eha-GO-9Qq"/>
+        <segue reference="nKq-Az-iIN"/>
     </inferredMetricsTieBreakers>
 </document>

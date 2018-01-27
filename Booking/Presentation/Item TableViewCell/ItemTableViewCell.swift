@@ -12,6 +12,7 @@ import Alamofire
 
 class ItemTableViewCell: UITableViewCell {
     
+    //MARK: Outlets
     @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!

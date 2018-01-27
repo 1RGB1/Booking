@@ -10,18 +10,22 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
+    //MARK: TextFields Outlets
     @IBOutlet weak var emailFld: FancyField!
     @IBOutlet weak var passwordFld: FancyField!
     
+    //MARK: View Functions
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    //MARK: TextFieldDelegate Functions
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.endEditing(true)
         return true
     }
     
+    //MARK: Buttons Actions
     @IBAction func loginBtnPressed(_ sender: Any) {
         
         if let email = emailFld.text, let password = passwordFld.text {

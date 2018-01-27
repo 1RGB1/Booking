@@ -10,11 +10,14 @@ import UIKit
 
 class MyItemsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    //MARK: Outlets
     @IBOutlet weak var myItemsTableView: UITableView!
     
+    //MARK: Locals
     var availableItems = [ItemModel]()
     let itemsNetwork = ItemsNetwork()
     
+    //MARK: View Function
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +32,7 @@ class MyItemsViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.loadData()
     }
     
+    //MARK: Loading Data
     func loadData() {
         
         let userId = Utilities.getSavedUserId()
@@ -46,6 +50,7 @@ class MyItemsViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    //MARK: Buttons Actions
     @IBAction func logoutPressed(_ sender: Any) {
         Utilities.saveAndDeleteUser(model: nil)
         
@@ -76,6 +81,7 @@ class MyItemsViewController: UIViewController, UITableViewDelegate, UITableViewD
         performSegue(withIdentifier: "myItemsSegue", sender: itemModel)
     }
     
+    //MARK: Naviagetion Segue Actions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "myItemsSegue" {
             let itemInfoViewController = segue.destination as! ItemInfoViewController

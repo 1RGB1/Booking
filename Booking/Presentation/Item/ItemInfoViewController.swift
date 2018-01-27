@@ -11,11 +11,13 @@ import Kingfisher
 
 class ItemInfoViewController: UIViewController {
 
+    //MARK: Outlets
     @IBOutlet weak var placeImageView: UIImageView!
     @IBOutlet weak var placeDescriptionLabel: UILabel!
     @IBOutlet weak var mainButton: UIButton!
     @IBOutlet weak var subButton: UIButton!
     
+    //MARK: Locals
     var itemModel : ItemModel?
     var images : [String]?
     var mainButtonAction : ReservationsActions?
@@ -23,11 +25,13 @@ class ItemInfoViewController: UIViewController {
     
     let itemsNetwork = ItemsNetwork()
     
+    //MARK: View Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
     }
     
+    //MARK: Preparing UI
     func setupView() {
         
         self.downloadImage()
@@ -72,6 +76,7 @@ class ItemInfoViewController: UIViewController {
         }
     }
 
+    //MARK: Buttons Actions
     @IBAction func mainButtonPressed(_ sender: Any) {
         switch mainButtonAction! {
         case .Request:

@@ -10,11 +10,14 @@ import UIKit
 
 class MyReservationsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //MARK: Outlets
     @IBOutlet weak var reservationsTableView: UITableView!
     
+    //MARK: Locals
     var myReservations = [ReservationModel]()
     let itemsNetwork = ItemsNetwork()
     
+    //MARK: View Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +32,7 @@ class MyReservationsViewController: UIViewController, UITableViewDataSource, UIT
         self.loadData()
     }
     
+    //MARK: Loading Data
     func loadData() {
         
         let userId = Utilities.getSavedUserId()
@@ -46,6 +50,7 @@ class MyReservationsViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
     
+    //MARK: Buttons Actions
     @IBAction func logoutPressed(_ sender: Any) {
         Utilities.saveAndDeleteUser(model: nil)
         
@@ -76,6 +81,7 @@ class MyReservationsViewController: UIViewController, UITableViewDataSource, UIT
         performSegue(withIdentifier: "myReservationsSegue", sender: reservationModel)
     }
     
+    //MARK: Navigation Segue Actions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "myReservationsSegue" {
             let itemInfoViewController = segue.destination as! ItemInfoViewController

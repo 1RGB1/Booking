@@ -11,20 +11,24 @@ import CoreLocation
 
 class RegisterationViewController: UIViewController, UITextFieldDelegate {
     
+    //MARK: ScrollView Outlet
     @IBOutlet weak var movingScrollView: UIScrollView!
     
+    //MARK: TextFields Outlets
     @IBOutlet weak var usernameFld: FancyField!
     @IBOutlet weak var passwordFld: FancyField!
     @IBOutlet weak var emailFld: FancyField!
     @IBOutlet weak var phoneFld: FancyField!
     @IBOutlet weak var addressFld: FancyField!
     
+    //MARK: Locals
     let locationManager = CLLocationManager()
     var currentLocation: CLLocation!
     var latitude: Double!
     var longitude: Double!
     var askPermForLocation = false
     
+    //MARK: View Functions
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -34,6 +38,7 @@ class RegisterationViewController: UIViewController, UITextFieldDelegate {
         self.getCurrentLocation()
     }
     
+    //MARK: Location Functions
     func getCurrentLocation() {
         if !askPermForLocation {
             self.locationAuthStatus()
@@ -54,6 +59,7 @@ class RegisterationViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //MARK: TextFieldDelegate Function
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if (textField == addressFld) {
             self.movingScrollView.setContentOffset(CGPoint(x: 0, y: 150), animated: true)
@@ -61,7 +67,7 @@ class RegisterationViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        movingScrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+        self.movingScrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -69,6 +75,7 @@ class RegisterationViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    //MARK: Buttons Actions
     @IBAction func backBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

@@ -1,18 +1,24 @@
 PODS:
   - Alamofire (4.6.0)
+  - ImagePicker (3.0.0)
   - Kingfisher (4.5.0)
   - ObjectMapper (3.1.0)
+  - OpalImagePicker (1.5.0)
 
 DEPENDENCIES:
   - Alamofire
+  - ImagePicker
   - Kingfisher
   - ObjectMapper
+  - OpalImagePicker (~> 1.5.0)
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  ImagePicker: 973953c25960fe04729a7082a56194321c6762d2
   Kingfisher: 26ae0473102b77b575da51960c932431e3745407
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  OpalImagePicker: 0fb2caaa4386524eef1b7979aebebd3ad0a27ef1
 
-PODFILE CHECKSUM: 594e627edd559b4863eb8a56372edde5fc8fc23b
+PODFILE CHECKSUM: 784e8613314f27949cb7097cad0be325e6a844c3
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.4.0

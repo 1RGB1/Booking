@@ -33,6 +33,7 @@ let RESERVATION_REQUESTED : String = "Reservation requested"
 let RESERVATION_CANCELLED : String = "Reservation cancelled"
 let RESERVATION_DENIED    : String = "Reservation denied"
 let RESERVATION_APPROVED  : String = "Reservation approved"
+let ITEM_ADDED            : String = "Item added successfuly"
 
 // Availability
 let NO  : Int = 0

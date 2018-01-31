@@ -15,6 +15,8 @@
 		E055654E1FFD50D000F60298 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E055654D1FFD50D000F60298 /* WebServiceManager.swift */; };
 		E05565501FFD5AC600F60298 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E055654F1FFD5AC600F60298 /* UserModel.swift */; };
 		E05565521FFD5AD300F60298 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05565511FFD5AD300F60298 /* BaseModel.swift */; };
+		E08E5CD62021EE5B001C2990 /* ImagesNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08E5CD52021EE5B001C2990 /* ImagesNetwork.swift */; };
+		E08E5CD8202254F1001C2990 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08E5CD7202254F1001C2990 /* MapViewController.swift */; };
 		E0C716791FFA33E300BECEA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C716781FFA33E300BECEA5 /* AppDelegate.swift */; };
 		E0C7167E1FFA33E300BECEA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C7167C1FFA33E300BECEA5 /* Main.storyboard */; };
 		E0C716801FFA33E300BECEA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0C7167F1FFA33E300BECEA5 /* Assets.xcassets */; };
@@ -54,6 +56,8 @@
 		E055654D1FFD50D000F60298 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
 		E055654F1FFD5AC600F60298 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E05565511FFD5AD300F60298 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		E08E5CD52021EE5B001C2990 /* ImagesNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesNetwork.swift; sourceTree = "<group>"; };
+		E08E5CD7202254F1001C2990 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E0C716751FFA33E300BECEA5 /* Booking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C716781FFA33E300BECEA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0C7167D1FFA33E300BECEA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 				E055654D1FFD50D000F60298 /* WebServiceManager.swift */,
 				E05565481FFD507300F60298 /* Auth */,
 				E0FB790B200A317B004D9A70 /* Item */,
+				E08E5CD42021EE3F001C2990 /* Image */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -168,6 +173,14 @@
 				E055654F1FFD5AC600F60298 /* UserModel.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		E08E5CD42021EE3F001C2990 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				E08E5CD52021EE5B001C2990 /* ImagesNetwork.swift */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		E0C7166C1FFA33E300BECEA5 = {
@@ -274,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				E0E4F7911FFD6C7C0096C6A9 /* AddNewItemViewController.swift */,
+				E08E5CD7202254F1001C2990 /* MapViewController.swift */,
 			);
 			path = "Add New Item";
 			sourceTree = "<group>";
@@ -425,7 +439,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7EB361AC9CFEF785947FAFD6 /* [CP] Copy Pods Resources */ = {
@@ -451,14 +465,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Booking/Pods-Booking-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/OpalImagePicker/OpalImagePicker.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpalImagePicker.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -486,6 +504,7 @@
 				E0FB78FC200A292D004D9A70 /* ItemModel.swift in Sources */,
 				E0FB7900200A2974004D9A70 /* ImageModel.swift in Sources */,
 				E0FB790D200A31E3004D9A70 /* ItemsNetwork.swift in Sources */,
+				E08E5CD62021EE5B001C2990 /* ImagesNetwork.swift in Sources */,
 				E04B2C6A1FFC04F10002513F /* HomeViewController.swift in Sources */,
 				E0C716911FFA3DC300BECEA5 /* RoundButton.swift in Sources */,
 				E055654E1FFD50D000F60298 /* WebServiceManager.swift in Sources */,
@@ -498,6 +517,7 @@
 				E055654A1FFD50A000F60298 /* AuthenticationNetwork.swift in Sources */,
 				E0C716A11FFAC17E00BECEA5 /* Utilities.swift in Sources */,
 				E0C716791FFA33E300BECEA5 /* AppDelegate.swift in Sources */,
+				E08E5CD8202254F1001C2990 /* MapViewController.swift in Sources */,
 				E0C716991FFA3E5B00BECEA5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,6 +658,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4B6HF4627C;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Booking/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AhmadApps.Booking;
@@ -654,6 +675,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4B6HF4627C;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Booking/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AhmadApps.Booking;

@@ -9,5 +9,7 @@ target 'Booking' do
   pod 'Alamofire'
   pod 'ObjectMapper'
   pod 'Kingfisher'
+  pod 'OpalImagePicker', '~> 1.5.0'
+  pod 'ImagePicker'
 
 end

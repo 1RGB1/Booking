@@ -183,26 +183,6 @@ class ItemsNetwork : BaseWebService {
         }
     }
     
-    func uploadImage(image: String,
-                     completionHandler: @escaping (_ model: ImageModel?, _ error: String?) -> ()) {
-        
-        let parameters = ["image" : image] as [String : AnyObject]
-        
-        WebServiceManager.createHTTPRequestWith(UPLOAD_IMAGE_URL, method: GET, parameters: parameters) {
-            (response) in
-            
-            if (response.result.value == nil) {
-                completionHandler(nil, self.handleError(errorCode: 999))
-                return
-            }
-            
-            let imageModel = Mapper<ImageModel>().map(JSONObject: response.result.value)
-            let errorDesc = self.handleError(errorCode: (imageModel?.errorCode)!)
-            
-            completionHandler(imageModel, errorDesc)
-        }
-    }
-    
     func searchWith(query: String,
                     completionHandler: @escaping (_ model: AvailableItemsModel?, _ error: String?) -> ()) {
         

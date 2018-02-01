@@ -878,16 +878,30 @@
                                                     <action selector="uploadImagePressed:" destination="RCa-gb-IvK" eventType="touchUpInside" id="Dsa-QL-Kso"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UZ-20-ERe" customClass="FancyButton" customModule="Booking" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="496" width="335" height="38"/>
+                                                <color key="backgroundColor" red="0.39364451169999998" green="0.89909154179999995" blue="0.65233957769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
+                                                <state key="normal" title="Add New Item">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addNewItem:" destination="RCa-gb-IvK" eventType="touchUpInside" id="z0K-Ri-za7"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="FT2-hZ-Zt4" firstAttribute="width" secondItem="F10-Bm-gVx" secondAttribute="width" id="66b-aF-qPS"/>
                                             <constraint firstItem="5Ui-Sg-hLe" firstAttribute="top" secondItem="UDv-wd-jPa" secondAttribute="top" constant="8" id="ALY-Ni-Uqv"/>
                                             <constraint firstItem="FT2-hZ-Zt4" firstAttribute="leading" secondItem="F10-Bm-gVx" secondAttribute="trailing" constant="20" id="CUC-F3-89J"/>
+                                            <constraint firstAttribute="bottom" secondItem="8UZ-20-ERe" secondAttribute="bottom" constant="20" id="J3n-TH-FuB"/>
                                             <constraint firstItem="FT2-hZ-Zt4" firstAttribute="top" secondItem="5Ui-Sg-hLe" secondAttribute="bottom" constant="20" id="NGK-Lf-0bK"/>
                                             <constraint firstItem="dTO-Jv-0KI" firstAttribute="leading" secondItem="UDv-wd-jPa" secondAttribute="leading" constant="20" id="Ygg-Xj-3CB"/>
                                             <constraint firstItem="dTO-Jv-0KI" firstAttribute="top" secondItem="5Ui-Sg-hLe" secondAttribute="bottom" constant="20" id="dAT-YW-n2q"/>
                                             <constraint firstAttribute="trailing" secondItem="5Ui-Sg-hLe" secondAttribute="trailing" constant="20" id="kFv-q6-Lcy"/>
+                                            <constraint firstAttribute="trailing" secondItem="8UZ-20-ERe" secondAttribute="trailing" constant="20" id="mP2-FQ-rP5"/>
+                                            <constraint firstItem="8UZ-20-ERe" firstAttribute="leading" secondItem="UDv-wd-jPa" secondAttribute="leading" constant="20" id="oiU-q3-vHu"/>
                                             <constraint firstItem="5Ui-Sg-hLe" firstAttribute="leading" secondItem="UDv-wd-jPa" secondAttribute="leading" constant="20" id="usT-XU-wUM"/>
                                             <constraint firstAttribute="trailing" secondItem="FT2-hZ-Zt4" secondAttribute="trailing" constant="20" id="yOG-wp-VMp"/>
                                         </constraints>
@@ -922,6 +936,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="acSwitch" destination="qjQ-ya-moE" id="RBd-qg-hNF"/>
+                        <outlet property="addNewItem" destination="8UZ-20-ERe" id="wIS-gw-kJB"/>
                         <outlet property="beachSwitch" destination="qoE-br-5WN" id="LLa-cF-EtC"/>
                         <outlet property="breakfastSwitch" destination="hnY-l5-oSe" id="v20-9x-PKW"/>
                         <outlet property="descriptionText" destination="pZe-za-CkJ" id="Jmk-1j-JiL"/>

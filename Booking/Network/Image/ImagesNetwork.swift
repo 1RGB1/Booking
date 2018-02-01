@@ -15,7 +15,7 @@ class ImagesNetwork : BaseWebService {
         
         let parameters = ["image" : image] as [String : AnyObject]
         
-        WebServiceManager.createHTTPRequestWith(UPLOAD_IMAGE_URL, method: GET, parameters: parameters) {
+        WebServiceManager.createHTTPRequestWith(UPLOAD_IMAGE_URL, method: POST, parameters: parameters) {
             (response) in
             
             if (response.result.value == nil) {

@@ -33,6 +33,7 @@ class AddNewItemViewController: UIViewController, UITextFieldDelegate, OpalImage
     
     @IBOutlet weak var selectCategoryButton: FancyButton!
     @IBOutlet var categoriesButtons: [FancyButton]!
+    @IBOutlet weak var addNewItem: FancyButton!
     
     //MARK: Locals
     let itemsNetwork = ItemsNetwork()
@@ -42,6 +43,7 @@ class AddNewItemViewController: UIViewController, UITextFieldDelegate, OpalImage
     var imagesId = [Int]()
     var categoryId = -1
     var itemLocation : [String]?
+    var alertAlreadyAppeard = false
     
     //MARK: View Functions
     override func viewDidLoad() {
@@ -64,7 +66,7 @@ class AddNewItemViewController: UIViewController, UITextFieldDelegate, OpalImage
         
         imagePicker.selectionTintColor = UIColor.white.withAlphaComponent(0.7)
         imagePicker.selectionImageTintColor = UIColor.black
-        imagePicker.maximumSelectionsAllowed = 3
+        imagePicker.maximumSelectionsAllowed = 2
         
         //Change default localized strings displayed to the user
         let configuration = OpalImagePickerConfiguration()
@@ -73,7 +75,7 @@ class AddNewItemViewController: UIViewController, UITextFieldDelegate, OpalImage
     }
     
     func configureImagePicker() {
-        imagePickerController.imageLimit = 3
+        imagePickerController.imageLimit = 2
 
         var configuration = Configuration()
         configuration.doneButtonTitle = "Done"
@@ -117,6 +119,39 @@ class AddNewItemViewController: UIViewController, UITextFieldDelegate, OpalImage
         return true
     }
     
+    func uploadImages(images: [String], picker: UIViewController) {
+        for imageString in images {
+            self.imagesNetwork.uploadImage(image: imageString, completionHandler: {
+                (imageModel, error) in
+                
+                if error == SUCCESS {
+                    self.imagesId.append((imageModel?.imageId)!)
+                } else if !self.alertAlreadyAppeard {
+                    self.alertAlreadyAppeard = true
+                }
+                
+                if self.imagesId.count == images.count {
+                    self.dismissImagePicker(imagePicker: picker)
+                }
+            })
+        }
+    }
+    
+    func dismissImagePicker(imagePicker: UIViewController) {
+        if !alertAlreadyAppeard {
+            let alertController = UIAlertController(title: SUCCESS, message: IMEGES_ADDED, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (alert) in
+                imagePicker.dismiss(animated: true, completion: nil)
+            })
+            
+            alertController.addAction(okAction)
+            imagePicker.present(alertController, animated: true, completion: nil)
+        } else {
+            let errorAlertController = Utilities.showAlertWithTitle(ERROR, withMessage: IMAGES_NOT_ADDED)
+            imagePicker.present(errorAlertController, animated: true, completion: nil)
+        }
+    }
+    
     //MARK: LocationProtocol Function
     func setItemLocation(location: [String]) {
         itemLocation = location
@@ -126,25 +161,16 @@ class AddNewItemViewController: UIViewController, UITextFieldDelegate, OpalImage
     func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {}
 
     func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
-        var alertAlreadyAppeard = false
-
+        
+        var encodedImages = [String]()
+        
         for image in images {
-
             let imageData : Data = UIImagePNGRepresentation(image)!
             let imageBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
-
-            self.imagesNetwork.uploadImage(image: imageBase64, completionHandler: {
-                (imageModel, error) in
-
-                if error == SUCCESS {
-                    self.imagesId.append(Int((imageModel?.imageId)!)!)
-                } else if !alertAlreadyAppeard {
-                    let errorAlertController = Utilities.showAlertWithTitle(ERROR, withMessage: error!)
-                    imagePicker.present(errorAlertController, animated: true, completion: nil)
-                    alertAlreadyAppeard = true
-                }
-            })
+            encodedImages.append(imageBase64)
         }
+        
+        self.uploadImages(images: encodedImages, picker: imagePicker)
     }
 
     func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
@@ -154,25 +180,15 @@ class AddNewItemViewController: UIViewController, UITextFieldDelegate, OpalImage
     //MARK: OpalImagePicker Functions
     func imagePicker(_ picker: OpalImagePickerController, didFinishPickingImages images: [UIImage]) {
         
-        var alertAlreadyAppeard = false
+        var encodedImages = [String]()
         
         for image in images {
-            
             let imageData : Data = UIImagePNGRepresentation(image)!
             let imageBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
-            
-            self.imagesNetwork.uploadImage(image: imageBase64, completionHandler: {
-                (imageModel, error) in
-                
-                if error == SUCCESS {
-                    self.imagesId.append(Int((imageModel?.imageId)!)!)
-                } else if !alertAlreadyAppeard {
-                    let errorAlertController = Utilities.showAlertWithTitle(ERROR, withMessage: error!)
-                    picker.present(errorAlertController, animated: true, completion: nil)
-                    alertAlreadyAppeard = true
-                }
-            })
+            encodedImages.append(imageBase64)
         }
+        
+        self.uploadImages(images: encodedImages, picker: picker)
     }
     
     //MARK: Buttons Actions
@@ -185,6 +201,9 @@ class AddNewItemViewController: UIViewController, UITextFieldDelegate, OpalImage
     }
     
     @IBAction func selectCategoryPressed(_ sender: FancyButton) {
+        
+        self.addNewItem.isHidden = !self.addNewItem.isHidden
+        
         self.categoriesButtons.forEach { (category) in
             UIView.animate(withDuration: 0.75, animations: {
                 category.isHidden = !category.isHidden
@@ -203,6 +222,8 @@ class AddNewItemViewController: UIViewController, UITextFieldDelegate, OpalImage
                 self.view.layoutIfNeeded()
             })
         }
+        
+        self.addNewItem.isHidden = false
     }
     
     @IBAction func uploadImagePressed(_ sender: FancyButton) {

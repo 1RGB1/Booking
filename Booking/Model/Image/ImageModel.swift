@@ -10,7 +10,7 @@ import ObjectMapper
 
 class ImageModel : BaseModel {
     
-    var imageId: String?
+    var imageId: Int?
     
     override func mapping(map: Map) {
         super.mapping(map: map)

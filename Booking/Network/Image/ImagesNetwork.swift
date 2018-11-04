@@ -10,6 +10,7 @@ import Alamofire
 import ObjectMapper
 
 class ImagesNetwork : BaseWebService {
+    
     func uploadImage(image: String,
                      completionHandler: @escaping (_ model: ImageModel?, _ error: String?) -> ()) {
         

@@ -14,7 +14,6 @@ class AvailableItemsModel : BaseModel {
     
     override func mapping(map: Map) {
         super.mapping(map: map)
-        
         availableItems <- map["items"];
     }
 }
